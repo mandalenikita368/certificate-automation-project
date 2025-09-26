@@ -1,0 +1,49 @@
+create database certificateautomationproject;
+show databases;
+use certificateautomationproject;
+create table adminlogin(admin_name varchar(50),private_key varchar(10),designation varchar(50));
+
+insert into adminlogin values('Nikita','admin@7406','Principal');
+select *from adminlogin;
+select *from adminlogin;
+use certificateautomationproject;
+select *   from adminlogin;
+alter table adminlogin add column mobile_no varchar(10);
+select*from userslogin;
+alter table userslogin add column file_path varchar(255);
+ desc  userslogin;
+ alter table userslogin rename column empid to stud_id;
+ alter table userslogin rename column stud_id to password;
+ create table bonafideapply(sname varchar(50),year varchar(20), dob varchar(20),address varchar(40),semester varchar(10),branch varchar(30));
+ 
+  desc  bonafideapply;
+  select*from bonafideapply;
+  alter table bonafideapply rename column sname to name ;
+  Create table viewrequeste1(requestId varchar(20),sname varchar(50),year varchar(20), dob varchar(20),address varchar(40),semester varchar(10),branch varchar(30));
+    desc  viewrequeste1;
+    alter table viewrequeste1 rename column sname to name ;
+    alter table viewrequeste1 drop column requestId;
+alter table bonafideapply 
+modify column   fees_receipt   BLOB;
+desc bonafideapply;
+
+select*from adminlogin; 
+select*from userslogin;
+select*from bonafideapply;
+alter table bonafideapply drop column fees_receipt;
+select*from viewrequeste1;
+desc viewrequeste1;
+alter table userslogin 
+modify column   fees_receipt   BLOB;
+alter table userslogin modify column date varchar(50);
+alter table userslogin modify column dob varchar(50);
+desc userslogin;
+
+
+
+
+
+
+
+
+
